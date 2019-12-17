@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38349967-E8D0-4802-A29E-3B6399741A23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectHouse</RootNamespace>
+    <AssemblyName>ProjectHouse</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>91</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D16D34F15601EE0C6C0E821A7D8DD8F9C116F7EF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProjectHouse_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="frmBilling.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmBilling.Designer.cs">
+      <DependentUpon>frmBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillingEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmBillingEdit.Designer.cs">
+      <DependentUpon>frmBillingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillingFast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmBillingFast.Designer.cs">
+      <DependentUpon>frmBillingFast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillingNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmBillingNew.Designer.cs">
+      <DependentUpon>frmBillingNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreditNoteEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmCreditNoteEdit.Designer.cs">
+      <DependentUpon>frmCreditNoteEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreditNoteNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmCreditNoteNew.Designer.cs">
+      <DependentUpon>frmCreditNoteNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreditNotePrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmCreditNotePrint.Designer.cs">
+      <DependentUpon>frmCreditNotePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeliveryEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDeliveryEdit.Designer.cs">
+      <DependentUpon>frmDeliveryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeliveryPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDeliveryPrint.Designer.cs">
+      <DependentUpon>frmDeliveryPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHouse.Designer.cs">
+      <DependentUpon>frmHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmInvoiceEdit.Designer.cs">
+      <DependentUpon>frmInvoiceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoicePrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmInvoicePrint.Designer.cs">
+      <DependentUpon>frmInvoicePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeliveryNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDeliveryNew.Designer.cs">
+      <DependentUpon>frmDeliveryNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmInvoiceNew.Designer.cs">
+      <DependentUpon>frmInvoiceNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreditNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmCreditNote.Designer.cs">
+      <DependentUpon>frmCreditNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDelivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDelivery.Designer.cs">
+      <DependentUpon>frmDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmInvoice.Designer.cs">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContact.Designer.cs">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmOrderEdit.Designer.cs">
+      <DependentUpon>frmOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmOrderNew.Designer.cs">
+      <DependentUpon>frmOrderNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmOrderPrint.Designer.cs">
+      <DependentUpon>frmOrderPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductLoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmProductLoan.Designer.cs">
+      <DependentUpon>frmProductLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductLoanEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmProductLoanEdit.Designer.cs">
+      <DependentUpon>frmProductLoanEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductLoanNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmProductLoanNew.Designer.cs">
+      <DependentUpon>frmProductLoanNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductLoanPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmProductLoanPrint.Designer.cs">
+      <DependentUpon>frmProductLoanPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuotation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmQuotation.Designer.cs">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuotationEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmQuotationEdit.Designer.cs">
+      <DependentUpon>frmQuotationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuotationNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmQuotationNew.Designer.cs">
+      <DependentUpon>frmQuotationNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuotationPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmQuotationPrint.Designer.cs">
+      <DependentUpon>frmQuotationPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintDoc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTest.Designer.cs">
+      <DependentUpon>ucTest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBilling.resx">
+      <DependentUpon>frmBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillingEdit.resx">
+      <DependentUpon>frmBillingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillingFast.resx">
+      <DependentUpon>frmBillingFast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillingNew.resx">
+      <DependentUpon>frmBillingNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreditNoteEdit.resx">
+      <DependentUpon>frmCreditNoteEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreditNoteNew.resx">
+      <DependentUpon>frmCreditNoteNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreditNotePrint.resx">
+      <DependentUpon>frmCreditNotePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeliveryEdit.resx">
+      <DependentUpon>frmDeliveryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeliveryPrint.resx">
+      <DependentUpon>frmDeliveryPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHouse.resx">
+      <DependentUpon>frmHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceEdit.resx">
+      <DependentUpon>frmInvoiceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoicePrint.resx">
+      <DependentUpon>frmInvoicePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeliveryNew.resx">
+      <DependentUpon>frmDeliveryNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceNew.resx">
+      <DependentUpon>frmInvoiceNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreditNote.resx">
+      <DependentUpon>frmCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDelivery.resx">
+      <DependentUpon>frmDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContact.resx">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderEdit.resx">
+      <DependentUpon>frmOrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderNew.resx">
+      <DependentUpon>frmOrderNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderPrint.resx">
+      <DependentUpon>frmOrderPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductLoan.resx">
+      <DependentUpon>frmProductLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductLoanEdit.resx">
+      <DependentUpon>frmProductLoanEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductLoanNew.resx">
+      <DependentUpon>frmProductLoanNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductLoanPrint.resx">
+      <DependentUpon>frmProductLoanPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuotation.resx">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuotationEdit.resx">
+      <DependentUpon>frmQuotationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuotationNew.resx">
+      <DependentUpon>frmQuotationNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuotationPrint.resx">
+      <DependentUpon>frmQuotationPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucTest.resx">
+      <DependentUpon>ucTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="ProjectHouse_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dtbDonkey.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dtbDonkey_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dtbDonkey.mdf</DependentUpon>
+    </Content>
+    <Content Include="yono_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="dtbDonkey.mdf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="dtbDonkey_log.ldf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
